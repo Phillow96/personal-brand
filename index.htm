@@ -1,1 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Personal Brand — Home</title>
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--accent:#06b6d4;--muted:#94a3b8;--surface:#0b1220}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial;color:#e6eef6;background:linear-gradient(180deg,#071025 0%, #081226 100%);}
+    .container{max-width:1100px;margin:0 auto;padding:32px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),#7c3aed)}
+    nav{display:flex;gap:12px}
+    nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:6px}
+    nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
+    .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:48px 0}
+    .hero h1{margin:0;font-size:2.2rem;color:#fff}
+    .hero p{margin:0;color:var(--muted);max-width:60ch}
+    .card{background:rgba(255,255,255,0.02);padding:18px;border-radius:12px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    footer{color:var(--muted);padding:24px 0;font-size:0.9rem;text-align:center}
+    .btn{background:var(--accent);color:#042027;padding:10px 14px;border-radius:8px;text-decoration:none;font-weight:600}
+    @media(min-width:800px){.hero{grid-template-columns:1fr 320px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-weight:700;color:#fff">Your Name</div>
+          <div style="font-size:0.85rem;color:var(--muted)">Designer • Developer • Creator</div>
+        </div>
+      </div>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Hi — I build useful things on the web.</h1>
+          <p>I’m a full‑stack developer focused on accessible interfaces, performant experiences, and clean design. I enjoy turning ideas into delightful, reliable products.</p>
+          <p style="margin-top:18px"><a class="btn" href="#contact">Get in touch</a></p>
+        </div>
+        <aside class="card">
+          <h3 style="margin-top:0">Quick Info</h3>
+          <p style="margin:6px 0;color:var(--muted)">Location: Your City — Available for freelance & full-time roles.</p>
+          <p style="margin:6px 0"><strong>Email:</strong> <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a></p>
+        </aside>
+      </section>
+
+      <section id="about" class="card" style="margin-bottom:18px">
+        <h2>About</h2>
+        <p style="color:var(--muted)">I build web applications with an emphasis on clarity, performance, and user experience. My stack includes modern JavaScript, accessible HTML, and pragmatic CSS.</p>
+      </section>
+
+      <section id="projects">
+        <h2 style="color:#fff">Selected Projects</h2>
+        <div class="grid" style="margin-top:12px">
+          <article class="card">
+            <h3 style="margin-top:0">Project Alpha</h3>
+            <p style="color:var(--muted)">A small app demonstrating a clean UI and real-time updates.</p>
+            <p><a href="#" style="color:var(--accent)">View project →</a></p>
+          </article>
+          <article class="card">
+            <h3 style="margin-top:0">Project Beta</h3>
+            <p style="color:var(--muted)">Design system and component library used across products.</p>
+            <p><a href="#" style="color:var(--accent)">View project →</a></p>
+          </article>
+          <article class="card">
+            <h3 style="margin-top:0">Project Gamma</h3>
+            <p style="color:var(--muted)">Performance-first landing pages and marketing sites.</p>
+            <p><a href="#" style="color:var(--accent)">View project →</a></p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="card" style="margin-top:18px">
+        <h2>Contact</h2>
+        <p style="color:var(--muted)">Prefer email? Send a message to <a href="mailto:you@example.com" style="color:var(--accent)">you@example.com</a>.</p>
+        <form action="mailto:you@example.com" method="post" enctype="text/plain" style="margin-top:12px">
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <input name="name" placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+            <input name="email" placeholder="Email" style="flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff">
+          </div>
+          <div style="margin-top:8px">
+            <textarea name="message" rows="4" placeholder="Message" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#fff"></textarea>
+          </div>
+          <div style="margin-top:8px"><button type="submit" class="btn">Send</button></div>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <span id="year"></span> Your Name — Built with care.</div>
+    </footer>
+  </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

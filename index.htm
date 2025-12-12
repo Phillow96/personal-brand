@@ -15,6 +15,11 @@
     nav{display:flex;gap:12px}
     nav a{color:var(--muted);text-decoration:none;padding:8px;border-radius:6px}
     nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
+    .actions{display:flex;align-items:center;gap:12px}
+    .social{display:flex;gap:8px;align-items:center}
+    .social a{display:inline-flex;width:38px;height:38px;align-items:center;justify-content:center;border-radius:8px;color:var(--muted);background:transparent;text-decoration:none}
+    .social a:hover{color:#fff;background:rgba(255,255,255,0.03)}
+    .social svg{width:18px;height:18px;display:block;fill:currentColor}
     .hero{display:grid;grid-template-columns:1fr;gap:24px;align-items:center;padding:48px 0}
     .hero h1{margin:0;font-size:2.2rem;color:#fff}
     .hero p{margin:0;color:var(--muted);max-width:60ch}
@@ -35,11 +40,24 @@
           <div style="font-size:0.85rem;color:var(--muted)">Designer • Developer • Creator</div>
         </div>
       </div>
-      <nav aria-label="Main navigation">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
+      <div class="actions">
+        <nav aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+        <div class="social" aria-label="Social links">
+          <a href="https://github.com/username" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577 0-.285-.01-1.04-.016-2.04-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.809 1.304 3.495.997.108-.776.418-1.305.76-1.605-2.665-.304-5.466-1.332-5.466-5.931 0-1.31.468-2.381 1.235-3.221-.123-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23a11.5 11.5 0 0 1 3.003-.404c1.018.005 2.045.138 3.003.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.241 2.874.118 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.624-5.475 5.921.43.372.823 1.102.823 2.222 0 1.606-.015 2.903-.015 3.293 0 .322.216.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/username" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM.5 8h4V24h-4zM8.5 8h3.84v2.16h.05c.54-1.02 1.86-2.1 3.84-2.1C21.66 8.06 24 10.5 24 14.76V24h-4v-8.64c0-2.06-.04-4.72-2.88-4.72-2.88 0-3.32 2.24-3.32 4.56V24h-4V8z"/></svg>
+          </a>
+          <a href="https://x.com/username" target="_blank" rel="noopener noreferrer" aria-label="X">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M22.46 6.01c-.77.34-1.6.57-2.46.67.89-.54 1.57-1.39 1.88-2.4-.82.49-1.72.85-2.68 1.04C18.88 4.6 17.78 4 16.56 4c-2.22 0-4.02 1.8-4.02 4.02 0 .32.04.63.11.92C8.28 9.84 5.11 8.03 3 5.39c-.35.6-.55 1.3-.55 2.04 0 1.41.72 2.66 1.82 3.39-.67-.02-1.3-.21-1.85-.51v.05c0 1.96 1.4 3.6 3.26 3.97-.34.09-.7.14-1.07.14-.26 0-.5-.03-.74-.07.5 1.56 1.96 2.69 3.69 2.73-1.35 1.06-3.04 1.69-4.87 1.69-.32 0-.64-.02-.95-.06 1.76 1.13 3.86 1.79 6.11 1.79 7.34 0 11.36-6.08 11.36-11.36v-.52c.78-.56 1.45-1.26 1.98-2.07-.72.32-1.5.54-2.31.64z"/></svg>
+          </a>
+        </div>
+      </div>
     </header>
 
     <main>
